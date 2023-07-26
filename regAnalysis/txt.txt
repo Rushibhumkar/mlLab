@@ -1,0 +1,56 @@
+In [7]: import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+
+In [8]: |# Load the dataset
+data = pd.read_csv('salary Data.csv')
+
+In [9]: |# Split the data into input (X) and output (y) variables
+X = data.iloc[:, :-1].values
+y = data.iloc[:, 1].values
+
+In [10]: # Create a Linear regression model
+regressor = LinearRegression()
+
+In [17]: | # Train the model
+regressor.fit(X, y)
+
+out[17]: |, LinearRegression
+
+LinearRegression()
+
+In [12]: # Predict the salaries based on the model
+y_pred = regressor.predict(X)
+
+In [13]: # Visualize the data and regression Line
+plt.scatter(X, y, color="blue")
+plt.plot(X, y_pred, color="red")
+plt.title('simple Linear Regression")
+plt.xlabel('Years of Experience’)
+plt.ylabel('salary")
+plt.show()
+
+Simple Linear Regression
+
+120000 1
+
+100000
+
+80000
+
+Salary
+
+60000 +
+
+40000
+
+Years of Experience
+In [14]: # Print the coefficients and intercept
+coefficients = regressor. coef
+intercept = regressor. intercept
+print("Coefficients:’, coefficients)
+print('Intercept:', intercept)
+
+Coefficients: [944996232146]
+Intercept: 25792,200198668717

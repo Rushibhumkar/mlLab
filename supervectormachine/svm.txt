@@ -1,0 +1,59 @@
+
+
+In [10]: import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model selection import train_test split
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy score
+
+In [11]: # Load the dataset
+data = pd.read_csv('Salary Data.csv')
+
+In [12]: # Split the dataset into features (X) and Labels (y)
+X = data.iloc[:, :-1].values
+y = data.iloc[:, -1].values
+
+In [4]: # Split the data into training and testing sets
+X_train, X_ test, y train, y test = train test split(X, y, test size=0.2, random _state=42)
+
+In [5]: # Create an SVM classifier
+classifier = svC(kernel='linear")
+
+In [6]: # Train the classifier
+classifier.fit(X_train, y_train)
+
+out[6]: |, SVC
+
+SvC(kernel="linear"')
+
+In [7]: # Make predictions on the test set
+y_pred = classifier.predict(X test)
+
+In [8]: # Calculate the accuracy of the model
+accuracy = accuracy score(y test, y pred)
+print("Accuracy:”, accuracy)
+
+Accuracy: 0.0
+In [16]: # Plot the decision boundary
+
+plt.scatter(X[:, @], y, c=y, cmap="viridis")
+
+ax = plt.gca()
+
+xlim = ax.get xlim()
+ylim = ax.get_ylim()
+120000
+[ J
+°
+100000
+LJ
+80000 hd
+* 9
+60000 A
+LJ
+LI [ J
+[]
+LJ
+400001 o 4 @
+2 4 6 10

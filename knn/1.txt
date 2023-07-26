@@ -1,0 +1,48 @@
+In [1]: import pandas as pd
+from sklearn.model selection import train test split
+from sklearn.neighbors import KileighborsRegressor
+from sklearn.metrics import mean squared _error
+
+In [2]: # Load the dataset
+data = pd.read csv('Salary Data.csv')
+
+In [3]: # Split the dataset into features (X) and target variable (y)
+X = data.iloc[:, :-1].values
+y = data.iloc[:, -1].values
+
+In [4]: # split the dataset into training and testing sets
+X train, X test, y train, y test = train test split(x, y, test size=0.2, random state=42)
+
+In [5]: # Create a KWN regression model
+knn = KneighborsRegressor(n_neighbors=5)
+
+In [6]: # Train the model
+kon. fit(X train, y train)
+
+out6]: |, KNeighborsRegressor
+
+KieighborsRegressor()
+
+In [7]: # Predict the target variable for the test set
+y_pred = knn.predict(X_test)
+
+In [8]: # Calculate the mean squared error
+mse = mean squared error(y test, y pred)
+print("Mean Squared Error:”, mse)
+
+Mean Squared Error: 50357290.43333333
+In [9]: # Print the predicted and actual values for the test set
+print("Predicted\tActual")
+
+for 1 in range(len(y pred)):
+print(f"{y_pred[1]}\t\t{y_test[i]}")
+
+Predicted Actual
+
+115249. 112635.0
+59394.4 67938.0
+106311.4 113812.0
+71904.8 83088.0
+58049.8 64445.0
+
+57499.0 57189.0

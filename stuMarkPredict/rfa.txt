@@ -1,0 +1,66 @@
+
+In [11]: import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model selection import train test split
+from sklearn.metrics import accuracy score
+
+In [12]: # Load the dataset
+data = pd.read_csv('Salary Data.csv')
+
+In [13]: # Split the data into features and target variable
+X = data.drop('Salary’, axis=1)
+y = data[ "salary']
+
+In [14]: # Split the data into training and testing sets
+X_train, X_test, y train, y test = train test_split(X, y, test_size=0.2, random_state=42)
+
+In [15]: # Initialize the Random Forest classifier
+rf classifier = RandomForestClassifier(n_estimators=108, random state=42)
+
+In [16]: # Train the classifier
+rf_classifier.fit(X_train, y train)
+
+out[16]: |, RandomForestClassifier
+
+RandomForestClassifier (random state=42)
+
+In [17]: # Predict the target variable for the test set
+y pred = rf classifier.predict(X test)
+
+In [18]: # Calculate the accuracy of the model
+accuracy = accuracy score(y test, y_pred)
+print("Accuracy:”, accuracy)
+
+Accuracy: 0.9
+In [19]: # Get feature importances
+
+importances = rf_classifier.feature_importances_
+features = X.colums
+plt.bar(features, importances)
+plt.xlabel( Features")
+plt.ylabel( Importance")
+plt.title( Feature Importances’)
+plt.xticks(rotation=45)
+
+plt. show()
+
+Feature Importances
+
+10
+
+0.8 1
+
+o
+oa
+L
+
+Importance
+
+o
++
+i
+
+0.2 1
+
+0.0
